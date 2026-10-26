@@ -15,12 +15,9 @@ export class ComicsComponent implements OnInit {
     
   }
    
-  ngOnInit(): void {
-  this._service.getComics().then(data=>{
-    this.arrayComics=data;
+  async ngOnInit(): Promise<void> {
+    this.arrayComics=await this._service.getComicsAsync();
     this._cdr.detectChanges();
-
-  }); 
   }
 
 }
