@@ -15,12 +15,24 @@ export class PersonasApiComponent implements OnInit{
 
 
   ngOnInit(): void {
-  //Si devolvemos un Observable  con la peticion , nos subscribimos a su promesa 
+    
+    //Si devolvemos una promesa con la peticion , nos subscribimos a su promesa
+    this._service.getPeronasPromesa().then((response)=>{
+      this.personas=response;
+      this._cdr.detectChanges();
+    })
+  }
 
+  //Si devolvemos un Observable  con la peticion , nos subscribimos a su promesa 
+/*
     this._service.getPersonas().subscribe((response) => {
       console.log(response);
       this.personas=response;
       this._cdr.detectChanges();
     });
-  }
+}
+    */
+  
+  
+  
 }
