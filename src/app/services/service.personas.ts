@@ -2,7 +2,8 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Persona } from "../models/persona";
 import { firstValueFrom, Observable } from "rxjs";
-import { Global } from "../Global";
+import { Global } from "../global";
+import {environment} from "../../environments/environment";
 @Injectable()
 export class ServicePersonas {
     //debemos recibir l objeto del HttpClient en el constructor 
@@ -12,7 +13,7 @@ export class ServicePersonas {
    
    //DEVOLVEMOS LA PETICION A MLA LLAMADA UTILIZANDO Observable 
     getPersonas():Observable<any>{  
-        let urlApi=Global.urlApiPersonas;
+        let urlApi=environment.urlApiPersonas;
         return this._http.get(urlApi);
 
     }

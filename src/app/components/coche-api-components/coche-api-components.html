@@ -1,0 +1,14 @@
+<h1>Coches</h1>
+
+<ul [className]="'list-group'">
+    @for(car of arrayCoches; track car){
+        <li [className]="'list-group-item'">
+            <h3 class="card-title">{{car.marca}}</h3>
+            <p class="card-text">{{car.modelo}}</p>
+            <p class="card-text">{{car.conductor}}</p>
+            <img src="{{car.imagen}}"/>
+        </li>
+<hr/>
+    }
+
+</ul>
