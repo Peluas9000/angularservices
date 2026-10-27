@@ -10,7 +10,9 @@ import { ServicePersonas } from './services/service.personas';
 import { PersonasApiComponent } from './components/personas-api-component/personas-api-component';
 import { CocheApiComponents } from './components/coche-api-components/coche-api-components';
 import { ServiceCoches } from './services/service.coches';
-import { PlnatillaFuncionSimpleComponent } from './components/plnatilla-funcion-simple-component/plnatilla-funcion-simple-component';
+import { PlantillaFuncionSimpleComponent } from './components/plantilla-funcion-simple-component/plantilla-funcion-simple-component';
+import { ServicePlantillas } from './services/service.plantillas';
+import { PlantillaFuncionMultipleComponent } from './components/plantilla-funcion-multiple-component/plantilla-funcion-multiple-component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { PlnatillaFuncionSimpleComponent } from './components/plnatilla-funcion-
     MenuComponent,
     PersonasApiComponent,
     CocheApiComponents,
-    PlnatillaFuncionSimpleComponent,
+    PlantillaFuncionSimpleComponent,
+    PlantillaFuncionMultipleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [
@@ -28,6 +31,7 @@ import { PlnatillaFuncionSimpleComponent } from './components/plnatilla-funcion-
     provideHttpClient(),
     ServicePersonas,
     ServiceCoches,
+    ServicePlantillas,
   ],
   bootstrap: [App],
 })
