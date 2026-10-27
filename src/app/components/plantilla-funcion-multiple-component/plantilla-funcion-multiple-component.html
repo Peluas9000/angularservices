@@ -1,0 +1,31 @@
+<h1>Plantilla funciones simples</h1>
+<select #selectFuncion  multiple size="5" className="form-select" class="form-select">
+    @for (funciones of arrayFunciones; track funciones) {
+        <option [value]="funciones">{{funciones}}</option>
+    }
+</select>
+<button (click)="mostrarPlantilla()">Mostrar plantilla</button>
+
+
+<table className="table table-striped" class="table table-striped">
+    <thead>
+        <tr className="table table-striped" class="table table-striped">
+            <th class="table table-striped" className="table table-striped">Id Empleado</th>
+            <th className="table table-striped" className="table table-striped">Apellido</th>
+            <th className="table table-striped" class="table table-striped">Funcion</th>
+            <th className="table table-striped" class="table table-striped">Salario</th>
+        </tr>
+    </thead>
+    <tbody>
+    @for (plantilla of arrayPlantilla; track plantilla) {
+
+        <tr className="table table-striped">
+            <td className="table table-striped">{{plantilla.idEmpleado}}</td>
+            <td className="table table-striped">{{plantilla.apellido}}</td>
+            <td className="table table-striped">{{plantilla.funcion}}</td>
+            <td className="table table-striped">{{plantilla.salario}}</td>
+        </tr>
+    }
+
+    </tbody>
+</table>

@@ -23,6 +23,7 @@ import { PlantillaFuncionMultipleComponent } from './components/plantilla-funcio
     CocheApiComponents,
     PlantillaFuncionSimpleComponent,
     PlantillaFuncionMultipleComponent,
+    
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [

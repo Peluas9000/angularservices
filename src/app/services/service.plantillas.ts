@@ -20,4 +20,15 @@ export class ServicePlantillas {
         let request ="/api/Plantilla/PlantillaFuncion/"+funcion;
         return firstValueFrom(this._http.get<Plantilla[]>(url+request));
     }
+
+    async getPlantillaFunciones(funciones:Array<string>):Promise<Plantilla[]>{
+        let content="";
+        for(let fun of funciones){
+            content+="funcion="+fun+"&";
+        }
+        content=content.substring(0,content.length-1);
+        let url=environment.urlApiPlantillas;
+        let request ="/api/Plantilla/PlantillaFunciones?"+content;
+        return firstValueFrom(this._http.get<Plantilla[]>(url+request));
+    }
 }
